@@ -27,7 +27,7 @@ sentinel rename-command {{ master.name }} {{ command }}
 {% endif -%}
 {% endfor -%}
 
-{% for option in redis_option %}
+{% for option in redis_sentinel_options %}
 sentinel {{ option|replace('_', '-') }} {{ redis_option[option] }}
 {% endfor -%}
 
