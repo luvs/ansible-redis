@@ -1,5 +1,4 @@
 ---
-
 # Redis uses a mix of sha1 and sha256 checksums.
 # Determine the type of checksum based on its length and prefix the variable appropriately
 - name: set redis checksum
