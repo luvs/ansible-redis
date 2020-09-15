@@ -27,6 +27,10 @@ sentinel rename-command {{ master.name }} {{ command }}
 {% endif -%}
 {% endfor -%}
 
+{% for option in redis_sentinel_options %}
+sentinel {{ option }} {{ redis_sentinel_options[option] }}
+{% endfor %}
+
 
 logfile {{ redis_sentinel_logfile }}
 syslog-enabled {{ redis_syslog_enabled }}

@@ -1,6 +1,6 @@
 ---
 ## Installation options
-redis_version: 2.8.24
+redis_version: 6.0.8
 redis_install_dir: /opt/redis
 redis_dir: /var/lib/redis/{{ redis_port }}
 redis_config_file_name: "{{ redis_port }}.conf"
@@ -139,4 +139,4 @@ redis_sentinel_monitors:
     notification_script: false
     client_reconfig_script: false
     rename_commands: []
-    # redis_sentinel_options: {}
+redis_sentinel_options: {}
